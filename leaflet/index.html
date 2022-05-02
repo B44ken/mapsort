@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+    <script src="dump.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <style>
+        body, #map {
+            z-index: 0;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            position: absolute;
+        }
+        button {
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+
+    <div id="map"></div>
+    <button onclick="dumpData()">dump</button>
+    <a class="download"></a>
+    <div class="hidden-imgs"></div>
+</body>
+</html>
