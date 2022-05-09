@@ -13,22 +13,25 @@
 <body>
     <style>
         body, #map {
-            z-index: 0;
+            z-index: 1;
             width: 100vw;
             height: 100vh;
             margin: 0;
-            position: absolute;
         }
         button {
-            z-index: 1;
+            z-index: 2;
             position: absolute;
             bottom: 0;
+        }
+        img {
+            width: 400px;
+            display: inline-block;
         }
     </style>
 
     <div id="map"></div>
     <button onclick="dumpData()">dump</button>
     <a class="download"></a>
-    <div class="hidden-imgs"></div>
+    <div class="imgdump"></div>
 </body>
 </html>
