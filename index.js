@@ -66,13 +66,13 @@ var stylePretty = feature => {
     return config
 }
 
-var dataset = 'nycmicro.geojson'
-if(location.hash) dataset = location.hash.replace('#','') + '.geojson'
+var dataset = 'geo/windsor.geojson'
+if(location.hash) dataset = 'geo/' + location.hash.replace('#','') + '.geojson'
 const setPosition = () => {
     var area = [0, 0]
-    if(dataset == 'suburb.geojson') area = [42.26632, -83.015534] 
-    if(dataset == 'windsor.geojson') area = [42.313, -83.032]
-    if(dataset == 'sanantonio.geojson') area = [29.425, -98.494]
+    if(dataset == 'geo/suburb.geojson') area = [42.26632, -83.015534] 
+    if(dataset == 'geo/windsor.geojson') area = [42.313, -83.032]
+    if(dataset == 'geo/sanantonio.geojson') area = [29.425, -98.494]
     if(dataset.startsWith('nyc')) area = [40.73, -74.00]
     map.setView(area, 15)
 }
